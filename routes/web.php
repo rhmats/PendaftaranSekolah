@@ -1,6 +1,13 @@
 <?php
 
 use App\Http\Controllers\Admin\AdminController;
+use App\Http\Controllers\Admin\AdminDataOrangtuaController;
+use App\Http\Controllers\Admin\AdminDataPesertaController;
+use App\Http\Controllers\Admin\AdminDetailDataOrangtuaController;
+use App\Http\Controllers\Admin\AdminDetailDataPesertaController;
+use App\Http\Controllers\Admin\AdminDokumenController;
+use App\Http\Controllers\Admin\AdminPembayaranController;
+use App\Http\Controllers\Admin\DetailPembayaranController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\User\DatadiriController;
 use App\Http\Controllers\User\DataOrangtuaController;
@@ -33,4 +40,11 @@ Route::middleware(['auth', 'UserMiddleware'])->group(function () {
 
 Route::middleware(['auth', 'AdminMiddleware'])->group(function () {
     Route::get('admin/dashboard', [AdminController::class, 'index'])->name('admin.dashboard');
+    Route::resource('admin-pembayaran', AdminPembayaranController::class);
+    Route::resource('admin-detail-pembayaran', DetailPembayaranController::class);
+    Route::resource('admin-datadiri', AdminDataPesertaController::class);
+    Route::resource('admin-detail-datadiri', AdminDetailDataPesertaController::class);
+    Route::resource('admin-data-orangtua', AdminDataOrangtuaController::class);
+    Route::resource('admin-detail-data-orangtua', AdminDetailDataOrangtuaController::class);
+    Route::resource('admin-dokumen', AdminDokumenController::class);
 });

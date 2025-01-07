@@ -62,12 +62,8 @@
                                         required>
                                 </div>
                                 <div class="form-group">
-                                    <label for="NIK">NIK</label>
-                                    <input id="NIK" name="NIK" type="number" class="form-control" required>
-                                </div>
-                                <div class="form-group">
-                                    <label for="NIK">NIK</label>
-                                    <input id="NIK" name="NIK" type="number" class="form-control" required>
+                                    <label for="nik">NIK</label>
+                                    <input id="nik" name="nik" type="number" class="form-control" required>
                                 </div>
                                 <div class="form-group">
                                     <label for="Agama">Agama</label>
@@ -80,6 +76,45 @@
                                         <option value="buddha">Buddha</option>
                                         <option value="konghucu">Konghucu</option>
                                     </select>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="card-header">
+                                <h4>Informasi Akademik</h4>
+                            </div>
+                            <div class="card-body">
+                                <div class="form-group">
+                                    <label for="nama_sekolah">Nama Sekolah</label>
+                                    <input id="nama_sekolah" name="nama_sekolah" type="text" class="form-control"
+                                        required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="asal_sekolah">Asal Sekolah</label>
+                                    <input id="asal_sekolah" name="asal_sekolah" type="text" class="form-control"
+                                        required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="npsn_sekolah">NPSN Sekolah Asal</label>
+                                    <input id="npsn_sekolah" name="npsn_sekolah" type="text" class="form-control"
+                                        required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="alamat_sekolah">Alamat Sekolah</label>
+                                    <textarea id="alamat_sekolah" name="alamat_sekolah" rows="3" class="form-control" required></textarea>
+                                </div>
+                                <div class="form-group">
+                                    <label for="tahun_lulus">Tahun Lulus</label>
+                                    <input id="tahun_lulus" name="tahun_lulus" type="number" class="form-control" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="nomor_ijazah">Nomor Ijazah</label>
+                                    <input id="nomor_ijazah" name="nomor_ijazah" type="text" class="form-control"
+                                        required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="nomor_skhun">Nomor SKHUN (Jika Ada)</label>
+                                    <input id="nomor_skhun" name="nomor_skhun" type="text" class="form-control">
                                 </div>
                             </div>
                         </div>
@@ -124,7 +159,7 @@
                                 </div>
                                 <div class="form-group">
                                     <label for="nomor_hp">Nomor HP/WhatsApp</label>
-                                    <input id="nomor_hp" name="nomor_hp" type="number" class="form-control" required>
+                                    <input id="nomor_hp" name="nomor_hp" type="tel" class="form-control" required>
                                 </div>
                                 <div class="form-group">
                                     <label for="email">Email</label>

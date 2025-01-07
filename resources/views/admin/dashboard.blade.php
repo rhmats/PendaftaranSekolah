@@ -4,14 +4,15 @@
 
 @section('sidebar')
     <li class="dropdown">
-        <a href="#"><i class="fas fa-home"></i><span>Dashboard</span></a>
+        <a href={{ route('admin.dashboard') }}><i class="fas fa-home"></i><span>Dashboard</span></a>
     </li>
     <li class="dropdown">
         <a href="#" class="nav-link has-dropdown"><i class="fas fa-database"></i><span>Data Calon Siswa</span></a>
         <ul class="dropdown-menu">
-            <li><a class="nav-link" href="index.html">Data Diri</a></li>
-            <li><a class="nav-link" href="index.html">Data Orang Tua</a></li>
-            <li><a class="nav-link" href="index.html">Data Dokumen</a></li>
+            <li><a class="nav-link" href={{ route('admin-pembayaran.index') }}>Data Pembayaran</a></li>
+            <li><a class="nav-link" href={{ route('admin-datadiri.index') }}>Data Diri</a></li>
+            <li><a class="nav-link" href={{ route('admin-data-orangtua.index') }}>Data Orang Tua</a></li>
+            <li><a class="nav-link" href={{ route('admin-dokumen.index') }}>Data Dokumen</a></li>
         </ul>
     </li>
     <li class="dropdown">

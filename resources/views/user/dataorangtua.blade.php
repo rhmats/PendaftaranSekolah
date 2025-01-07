@@ -49,7 +49,7 @@
                                 <div class="form-group">
                                     <label for="pendidikan_terakhir_ayah">Pendidikan Terakhir Ayah</label>
                                     <select name="pendidikan_terakhir_ayah" id="pendidikan_terakhir_ayah"
-                                        class="form-control">
+                                        class="form-control" required>
                                         <option value="" disabled selected>Pilih Pendidikan Terakhir Ayah</option>
                                         <option value="tidak_sekolah">Tidak Sekolah</option>
                                         <option value="paud">Paud</option>
@@ -78,7 +78,7 @@
                                 </div>
                                 <div class="form-group">
                                     <label for="pekerjaan_ayah">Pekerjaan</label>
-                                    <select name="pekerjaan_ayah" id="pekerjaan_ayah" class="form-control">
+                                    <select name="pekerjaan_ayah" id="pekerjaan_ayah" class="form-control" required>
                                         <option value="" disabled selected>Pilih Pekerjaan Ayah</option>
                                         <option value="tidak_bekerja">Tidak Bekerja</option>
                                         <option value="nelayan">Nelayan</option>
@@ -100,7 +100,7 @@
                                 </div>
                                 <div class="form-group">
                                     <label for="penghasilan_ayah">Penghasilan Ayah</label>
-                                    <select name="penghasilan_ayah" id="penghasilan_ayah" class="form-control">
+                                    <select name="penghasilan_ayah" id="penghasilan_ayah" class="form-control" required>
                                         <option value="" disabled selected>Pilih Penghasilan Ayah</option>
                                         <option value="tidak_ada_penghasilan">Tidak Ada Penghasilan</option>
                                         <option value="kurang_dari_500">Kurang dari Rp. 500.000,00</option>
@@ -113,7 +113,7 @@
                                 </div>
                                 <div class="form-group">
                                     <label for="nomor_hp">Nomor Handphone</label>
-                                    <input id="nomor_hp" name="nomor_hp" type="number" class="form-control" required>
+                                    <input id="nomor_hp" name="nomor_hp" type="tel" class="form-control" required>
                                 </div>
                             </div>
                         </div>
@@ -135,7 +135,7 @@
                                 <div class="form-group">
                                     <label for="pendidikan_terakhir_ibu">Pendidikan Terakhir Ibu</label>
                                     <select name="pendidikan_terakhir_ibu" id="pendidikan_terakhir_ibu"
-                                        class="form-control">
+                                        class="form-control" required>
                                         <option value="" disabled selected>Pilih Pendidikan Terakhir Ibu</option>
                                         <option value="tidak_sekolah">Tidak Sekolah</option>
                                         <option value="paud">Paud</option>
@@ -164,7 +164,7 @@
                                 </div>
                                 <div class="form-group">
                                     <label for="pekerjaan_ibu">Pekerjaan Ibu</label>
-                                    <select name="pekerjaan_ibu" id="pekerjaan_ibu" class="form-control">
+                                    <select name="pekerjaan_ibu" id="pekerjaan_ibu" class="form-control" required>
                                         <option value="" disabled selected>Pilih Pekerjaan Ibu</option>
                                         <option value="tidak_bekerja">Tidak Bekerja</option>
                                         <option value="nelayan">Nelayan</option>
@@ -186,7 +186,7 @@
                                 </div>
                                 <div class="form-group">
                                     <label for="penghasilan_ibu">Penghasilan Ibu</label>
-                                    <select name="penghasilan_ibu" id="penghasilan_ibu" class="form-control">
+                                    <select name="penghasilan_ibu" id="penghasilan_ibu" class="form-control" required>
                                         <option value="" disabled selected>Pilih Penghasilan Ibu</option>
                                         <option value="tidak_ada_penghasilan">Tidak Ada Penghasilan</option>
                                         <option value="kurang_dari_500">Kurang dari Rp. 500.000,00</option>
@@ -199,7 +199,7 @@
                                 </div>
                                 <div class="form-group">
                                     <label for="nomor_hp">Nomor Handphone</label>
-                                    <input id="nomor_hp" name="nomor_hp" type="number" class="form-control" required>
+                                    <input id="nomor_hp" name="nomor_hp" type="tel" class="form-control" required>
                                 </div>
                             </div>
                         </div>
@@ -242,7 +242,8 @@
                                 </div>
                                 <div class="form-group">
                                     <label for="pendidikan_terakhir_wali">Pendidikan Terakhir Wali</label>
-                                    <select name="pendidikan_terakhir_wali" id="pendidikan_terakhir_wali" class="form-control">
+                                    <select name="pendidikan_terakhir_wali" id="pendidikan_terakhir_wali"
+                                        class="form-control">
                                         <option value="" disabled selected>Pilih Pendidikan Terakhir Wali</option>
                                         <option value="tidak_sekolah">Tidak Sekolah</option>
                                         <option value="paud">Paud</option>
@@ -271,7 +272,7 @@
                                 </div>
                                 <div class="form-group">
                                     <label for="nomor_hp">Nomor Handphone</label>
-                                    <input id="nomor_hp" name="nomor_hp" type="number" class="form-control" required>
+                                    <input id="nomor_hp" name="nomor_hp" type="tel" class="form-control">
                                 </div>
                             </div>
                         </div>
