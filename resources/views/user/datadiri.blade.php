@@ -136,6 +136,7 @@
                                 <div class="form-group">
                                     <label for="nomor_skhun">Nomor SKHUN (Jika Ada)</label>
                                     <input id="nomor_skhun" name="nomor_skhun" type="text" class="form-control">
+                                    <p style="font-style: italic">Jika SKHUN belum ada, tuliskan belum ada</p>
                                 </div>
                             </div>
                         </div>
