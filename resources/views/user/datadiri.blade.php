@@ -28,8 +28,28 @@
             <h1>Data diri</h1>
         </div>
 
+        @if (session('success'))
+            <div class="alert alert-success">
+                {{ session('success') }}
+            </div>
+        @elseif(session('error'))
+            <div class="alert alert-danger">
+                {{ session('error') }}
+            </div>
+        @endif
+
+        @if ($errors->any())
+            <div class="alert alert-danger">
+                <ul>
+                    @foreach ($errors->all() as $error)
+                        <li>{{ $error }}</li>
+                    @endforeach
+                </ul>
+            </div>
+        @endif
+
         <div class="section-body">
-            <form action="">
+            <form action="{{ route('datadiri.store') }}" method="POST">
                 @csrf
                 <div class="row">
                     <div class="col-12 col-md-6 col-lg-6">
@@ -63,11 +83,11 @@
                                 </div>
                                 <div class="form-group">
                                     <label for="nik">NIK</label>
-                                    <input id="nik" name="nik" type="number" class="form-control" required>
+                                    <input id="nik" name="nik" type="text" class="form-control" required>
                                 </div>
                                 <div class="form-group">
-                                    <label for="Agama">Agama</label>
-                                    <select name="Agama" id="Agama" class="form-control">
+                                    <label for="agama">Agama</label>
+                                    <select name="agama" id="agama" class="form-control">
                                         <option value="" disabled selected>Pilih Agama</option>
                                         <option value="islam">Islam</option>
                                         <option value="kristen">Kristen</option>
@@ -105,7 +125,8 @@
                                 </div>
                                 <div class="form-group">
                                     <label for="tahun_lulus">Tahun Lulus</label>
-                                    <input id="tahun_lulus" name="tahun_lulus" type="number" class="form-control" required>
+                                    <input id="tahun_lulus" name="tahun_lulus" type="number" class="form-control"
+                                        required>
                                 </div>
                                 <div class="form-group">
                                     <label for="nomor_ijazah">Nomor Ijazah</label>
@@ -143,7 +164,7 @@
                                 </div>
                                 <div class="form-group">
                                     <label for="kelurahan">Kelurahan/Desa</label>
-                                    <input id="kelurahan" name="kelurahan" type="date" class="form-control" required>
+                                    <input id="kelurahan" name="kelurahan" type="text" class="form-control" required>
                                 </div>
                                 <div class="form-group">
                                     <label for="kecamatan">Kecamatan</label>

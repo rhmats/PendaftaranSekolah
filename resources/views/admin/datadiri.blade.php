@@ -60,14 +60,20 @@
                                         <th>Detail Data</th>
                                     </tr>
                                     <tr>
-                                        <td>1</td>
-                                        <td>Budi</td>
-                                        <td>Indonesia</td>
-                                        <td>20 Januari 2025</td>
-                                        <td>Jakarta</td>
-                                        <td>08123456789</td>
-                                        <td><a href={{ route('admin-detail-datadiri.index') }}
-                                                class="btn btn-primary">Detail</a></td>
+                                        @foreach ($datadiri as $index => $data)
+                                    <tr>
+                                        <td>{{ $index + 1 }}</td>
+                                        <td>{{ $data->nama_lengkap }}</td>
+                                        <td>{{ $data->tempat_lahir }}</td>
+                                        <td>{{ \Carbon\Carbon::parse($data->tanggal_lahir)->format('d F Y') }}</td>
+                                        <td>{{ $data->alamat }}</td>
+                                        <td>{{ $data->nomor_hp }}</td>
+                                        <td>
+                                            <a href="{{ route('admin-detail-datadiri.index', ['id' => $data->id]) }}"
+                                                class="btn btn-primary">Detail</a>
+                                        </td>
+                                    </tr>
+                                    @endforeach
                                     </tr>
                                 </table>
                             </div>

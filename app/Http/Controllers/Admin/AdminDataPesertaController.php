@@ -3,7 +3,9 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
+use App\Models\Datadiri;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class AdminDataPesertaController extends Controller
 {
@@ -12,7 +14,11 @@ class AdminDataPesertaController extends Controller
      */
     public function index()
     {
-        return view('admin.datadiri');
+        // Mengambil semua data diri peserta didik
+        $datadiri = Datadiri::all();
+
+        // Mengirim data ke view admin.datadiri
+        return view('admin.datadiri', compact('datadiri'));
     }
 
     /**
