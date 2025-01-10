@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
+use App\Models\Dataorangtua;
 use Illuminate\Http\Request;
 
 class AdminDataOrangtuaController extends Controller
@@ -12,7 +13,11 @@ class AdminDataOrangtuaController extends Controller
      */
     public function index()
     {
-        return view('admin.dataorangtua');
+         // Mengambil semua data diri peserta didik
+         $dataorangtua = Dataorangtua::all();
+
+         // Mengirim data ke view admin.datadiri
+         return view('admin.dataorangtua', compact('dataorangtua'));
     }
 
     /**

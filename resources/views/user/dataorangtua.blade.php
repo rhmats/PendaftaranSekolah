@@ -28,8 +28,28 @@
             <h1>Data Orang tua</h1>
         </div>
 
+        @if (session('success'))
+            <div class="alert alert-success">
+                {{ session('success') }}
+            </div>
+        @elseif(session('error'))
+            <div class="alert alert-danger">
+                {{ session('error') }}
+            </div>
+        @endif
+
+        @if ($errors->any())
+            <div class="alert alert-danger">
+                <ul>
+                    @foreach ($errors->all() as $error)
+                        <li>{{ $error }}</li>
+                    @endforeach
+                </ul>
+            </div>
+        @endif
+
         <div class="section-body">
-            <form action="">
+            <form action="{{ route('dataorangtua.store') }}" method="POST">
                 @csrf
                 <div class="row">
                     <div class="col-12 col-md-6 col-lg-6">
@@ -112,8 +132,8 @@
                                     </select>
                                 </div>
                                 <div class="form-group">
-                                    <label for="nomor_hp">Nomor Handphone</label>
-                                    <input id="nomor_hp" name="nomor_hp" type="tel" class="form-control" required>
+                                    <label for="nomor_hp_ayah">Nomor Handphone</label>
+                                    <input id="nomor_hp_ayah" name="nomor_hp_ayah" type="tel" class="form-control" required>
                                 </div>
                             </div>
                         </div>
@@ -198,8 +218,8 @@
                                     </select>
                                 </div>
                                 <div class="form-group">
-                                    <label for="nomor_hp">Nomor Handphone</label>
-                                    <input id="nomor_hp" name="nomor_hp" type="tel" class="form-control" required>
+                                    <label for="nomor_hp_ibu">Nomor Handphone</label>
+                                    <input id="nomor_hp_ibu" name="nomor_hp_ibu" type="tel" class="form-control" required>
                                 </div>
                             </div>
                         </div>
@@ -271,8 +291,8 @@
                                     </select>
                                 </div>
                                 <div class="form-group">
-                                    <label for="nomor_hp">Nomor Handphone</label>
-                                    <input id="nomor_hp" name="nomor_hp" type="tel" class="form-control">
+                                    <label for="nomor_hp_wali">Nomor Handphone</label>
+                                    <input id="nomor_hp_wali" name="nomor_hp_wali" type="tel" class="form-control">
                                 </div>
                             </div>
                         </div>

@@ -60,14 +60,18 @@
                                         <th>Detail Data</th>
                                     </tr>
                                     <tr>
-                                        <td>1</td>
-                                        <td>Budi</td>
-                                        <td>Fajri</td>
-                                        <td>Wati</td>
-                                        <td>08123123123</td>
-                                        <td>08123456789</td>
-                                        <td><a href={{ route('admin-detail-data-orangtua.index') }}
+                                        @foreach ($dataorangtua as $index => $orangtua)
+                                    <tr>
+                                        <td>{{ $index + 1 }}</td>
+                                        <td>{{ $orangtua->datadiri->nama_lengkap }}</td> <!-- Menampilkan Nama Lengkap -->
+                                        <td>{{ $orangtua->nama_ayah }}</td>
+                                        <td>{{ $orangtua->nama_ibu }}</td>
+                                        <td>{{ $orangtua->nomor_hp_ayah }}</td>
+                                        <td>{{ $orangtua->nomor_hp_ibu }}</td>
+                                        <td><a href="{{ route('admin-detail-data-orangtua.index', $orangtua->id) }}"
                                                 class="btn btn-primary">Detail</a></td>
+                                    </tr>
+                                    @endforeach
                                     </tr>
                                 </table>
                             </div>
